@@ -1,0 +1,17 @@
+.bg-blue{
+    background-color: lightblue;
+}
+
+.title{
+    background-color: #DCDCDC;
+     text-transform: uppercase;
+     text-align: center;
+     color:DimGray;
+}
+
+.alinhamento-menu{ 
+ 
+    position: absolute;
+    right: 0px;
+}
+

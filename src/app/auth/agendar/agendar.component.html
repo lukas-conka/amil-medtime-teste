@@ -1,0 +1,132 @@
+<app-menu></app-menu>
+<div class="container forms">
+  <div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="rede" role="tabpanel" aria-labelledby="rede-tab"> 
+    
+   <form [formGroup]="formAgendar">
+      <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="sucessoCadastro">
+            <strong>Consulta marcada com sucesso. </strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+     
+     <div class="form-group">
+       <label for="estado">Estado</label>
+        <select name="estado" class="form-control" id="estado" formControlName="estado" >
+          <option value="">Selecione um estado</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Rorâima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+        <span *ngIf="formAgendar.controls['estado'].invalid && formAgendar.controls['estado'].dirty">
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            <span class="text-danger">Preencha</span>
+        </span>
+     </div>
+     <div class="form-group">
+       <label for="especialidade">Especialidade</label>
+        <select name="especialidade" class="form-control" id="especialidade" formControlName="especialidade" >
+          <option value="">Selecione uma especialidade</option>
+          <option value="Ortondondia">Ortodondia</option>
+          <option value="Pediatria">Pediatria</option>
+          <option value="Clinico Geral">Clinico Geral</option>
+        </select>
+        <span *ngIf="formAgendar.controls['especialidade'].invalid && formAgendar.controls['especialidade'].dirty">
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            <span class="text-danger">Preencha</span>
+        </span>
+     </div>
+     <div class="form-group">
+       <label for="unidade">Unidade</label>
+        <select name="unidade" class="form-control" id="unidade" formControlName="unidade" >
+          <option value="">Selecione uma unidade</option>
+          <option value="Maria Rosa">Maria Rosa</option>
+          <option value="Santa Cruz">Santa Cruz</option>
+          <option value="Lapa">Lapa</option>
+          <option value="Metropolitano">Metropolitano</option>
+          <option value="Clinicas">Clinicas</option>
+        </select>
+        <span *ngIf="formAgendar.controls['unidade'].invalid && formAgendar.controls['unidade'].dirty">
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            <span class="text-danger">Preencha</span>
+        </span>
+     </div>
+     <div class="form-group">
+       <label for="unidade">Data</label>
+       <input type="date" id="data" class="form-control" formControlName="data" name="data" >
+     </div>
+     <span *ngIf="formAgendar.controls['data'].invalid && formAgendar.controls['data'].dirty">
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            <span class="text-danger">Preencha</span>
+        </span>
+     <div class="form-group">
+       <label for="horario">Hora</label>
+       <input type="datetime-local" id="horario" class="form-control" name="horario" formControlName="horario" >
+     </div>
+     <span *ngIf="formAgendar.controls['horario'].invalid && formAgendar.controls['horario'].dirty">
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            <span class="text-danger">Preencha</span>
+        </span>
+    <input type="submit" [disabled]="formAgendar.invalid" (click)="onSubmit()" class="btn btn-primary" value="Agendar" />
+   </form>
+
+    <a routerLink="/auth/agendamento">
+      <div class="botoes voltar">
+          <i class="fa fa-arrow-left"></i> Voltar
+      </div>
+    </a>
+
+  </div>
+  <div class="tab-pane fade" id="plano" role="tabpanel" aria-labelledby="plano-tab">
+        <div class="botoes">
+            <i class="fa fa-calendar"></i> Cartões
+        </div>
+    
+    <div class="botoes">
+        <i class="fa fa-laptop"></i> Demonstrativos de I.R
+    </div>
+  </div>
+  <div class="tab-pane fade" id="saude" role="tabpanel" aria-labelledby="saude-tab">
+
+    <div class="botoes">
+            <i class="fa fa-calendar"></i> Prontuario
+        </div>
+    
+    <div class="botoes">
+        <i class="fa fa-laptop"></i> Vacinas
+    </div>
+  </div>
+  <div class="tab-pane fade" id="contato" role="tabpanel" aria-labelledby="contato-tab">
+
+      <div class="botoes">
+            <i class="fa fa-calendar"></i> Central de atendimento
+        </div>
+  </div>
+</div>
+</div>
+<app-footer></app-footer>

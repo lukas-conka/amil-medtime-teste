@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+
+.header {
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+.header img {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.menus{
+     text-align: center;
+     height: 40px;
+     margin: 3%;
+     color: #fff;
+     text-align: center;
+     display: block;
+     width: 100%;
+     font-size: 24px;
+     
+}
+
+.btn1{
+     background-color:goldenrod;
+}
+
+.btn2{
+     background-color: palevioletred;
+}
+
+.btn3{
+    background-color: purple;
+}
+
+.btn4 {
+    background-color: royalblue;
+    
+}
+
+.btn {
+    text-align: center;
+     height: 40px;
+
+     color: #fff;
+     text-align: center;
+     display: block;
+     width: 100%;
+     font-size: 24px;
+     margin: 3px;
+   
+     
+    
+}
+
+.entrar{
+    background-color: royalblue;
+}
+
+.voltar{
+    background-color: purple;
+}
+
+.titles{
+    font-size: 20px;
+    color:royalblue;
+    margin: 3%;
+    height: 40px;
+    display: block;
+    width: 100%;
+}
+
+.botoes{
+    background-color: royalblue;
+    color: #fff;
+    font-size: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.voltar{
+    background-color: purple !important;
+}
+
+.forms{
+    overflow: scroll;
+    margin-bottom: 100px;
+    height: 500px;
+    
+}
+
+.icones {
+    font-size: 15px;
+    text-align: center;
+    background-color:#DCDCDC;
+}
+.footer{
+    background-color:#DCDCDC;
+}

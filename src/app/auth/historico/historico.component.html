@@ -1,0 +1,87 @@
+<app-menu></app-menu>
+<div class="container">
+  <div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="rede" role="tabpanel" aria-labelledby="rede-tab"> 
+    
+ <div id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="card" *ngFor="let his of agendamento">
+          <div class="card-header">
+            <h5 class="mb-0">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          {{his.especialidade}} - {{his.data}} 
+        </a>
+            </h5>
+          </div>
+          <div class="card-block">
+            <p>Especialidade: {{his.especialidade}}</p>
+            <p>Unidade: {{his.data}}</p>
+            <p>Estado: {{his.estado}}</p>
+            <p>Data: {{his.data}}</p>
+            <p>Horario: {{his.horario}}</p>
+          </div>
+
+        </div>
+      
+
+      </div>
+    <a routerLink="/auth/dashboard">
+      <div class="botoes voltar">
+          <i class="fa fa-arrow-left"></i> Voltar
+      </div>
+    </a>
+
+  </div>
+  <div class="tab-pane fade" id="plano" role="tabpanel" aria-labelledby="plano-tab">
+   <div class="botoes">
+            <i class="fa fa-calendar"></i> Cartões
+        </div>
+    
+    <div class="botoes">
+        <i class="fa fa-laptop"></i> Demonstrativos de I.R
+    </div>
+
+  </div>
+  <div class="tab-pane fade" id="saude" role="tabpanel" aria-labelledby="saude-tab">
+ <div class="botoes">
+            <i class="fa fa-calendar"></i> Prontuario
+        </div>
+    
+    <div class="botoes">
+        <i class="fa fa-laptop"></i> Vacinas
+    </div>
+
+  </div>
+  <div class="tab-pane fade" id="contato" role="tabpanel" aria-labelledby="contato-tab">
+ <a routerLink="/auth/editar">
+ <div class="botoes">
+            <i class="fa fa-calendar"></i> Editar dados
+        </div>
+</a>
+        <div class="row">
+          <div class="col-3">
+            Nome:
+          </div>
+          <div class="col-8">
+            {{auth.getUser().name}}
+          </div>
+          <div class="col-3">
+            Endereco:
+          </div>
+          <div class="col-8">
+            {{user.logradouro}}
+          </div>
+          <div class="col-3">
+            Telefone:
+          </div>
+          <div class="col-8">
+            {{user.telefone}}
+          </div>
+        </div>
+
+  </div>
+</div>
+</div>
+<app-footer></app-footer>
+
+

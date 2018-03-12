@@ -1,0 +1,59 @@
+<app-menu></app-menu>
+<div class="container">
+  <div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="rede" role="tabpanel" aria-labelledby="rede-tab"> 
+    
+ <div id="accordion" role="tablist" aria-multiselectable="true">
+    <a routerLink="/auth/agendamento">
+          <div class="botoes voltar">
+            <i class="fa fa-arrow-left"></i> Voltar
+          </div>
+        </a>
+
+       <a routerLink="/auth/agendar">
+        <div class="botoes">
+            <i class="fa fa-calendar"></i> Agendar consulta
+        </div>
+    </a>
+    <a routerLink="/auth/historico">
+        <div class="botoes">
+            <i class="fa fa-laptop"></i> Historico de agendamento
+        </div>
+    </a>
+
+      </div>
+
+
+  </div>
+  <div class="tab-pane fade" id="plano" role="tabpanel" aria-labelledby="plano-tab">
+   <div class="botoes">
+            <i class="fa fa-calendar"></i> Cartões
+        </div>
+    
+    <div class="botoes">
+        <i class="fa fa-laptop"></i> Demonstrativos de I.R
+    </div>
+
+  </div>
+  <div class="tab-pane fade" id="saude" role="tabpanel" aria-labelledby="saude-tab">
+ <div class="botoes">
+            <i class="fa fa-calendar"></i> Prontuario
+        </div>
+    
+    <div class="botoes">
+        <i class="fa fa-laptop"></i> Vacinas
+    </div>
+
+  </div>
+  <div class="tab-pane fade" id="contato" role="tabpanel" aria-labelledby="contato-tab">
+ <div class="botoes">
+            <i class="fa fa-calendar"></i> Central de atendimento
+        </div>
+
+  </div>
+</div>
+</div>
+<app-footer></app-footer>
+
+
+
